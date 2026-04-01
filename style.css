@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a2e;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.calculator {
+    background-color: #16213e;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+#display {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+    background-color: #0f3460;
+    color: #fff;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+button {
+    padding: 18px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-weight: bold;
+}
+button:hover {
+    transform: scale(1.05);
+}
+button:active {
+    transform: scale(0.95);
+}
+/* Number buttons */
+button:nth-child(n+17):nth-child(-n+20),
+button:nth-child(n+21):nth-child(-n+24),
+button:nth-child(n+25):nth-child(-n+28),
+button:nth-child(n+29):nth-child(-n+31) {
+    background-color: #2d4a6f;
+    color: #fff;
+}
+button:nth-child(n+17):nth-child(-n+20):hover,
+button:nth-child(n+21):nth-child(-n+24):hover,
+button:nth-child(n+25):nth-child(-n+28):hover,
+button:nth-child(n+29):nth-child(-n+31):hover {
+    background-color: #3d5a80;
+}
+/* Scientific function buttons */
+button:nth-child(-n+16) {
+    background-color: #e94560;
+    color: #fff;
+}
+button:nth-child(-n+16):hover {
+    background-color: #ff6b6b;
+}
+/* Operator buttons */
+button:nth-child(4),
+button:nth-child(8),
+button:nth-child(12),
+button:nth-child(16),
+button:nth-child(20),
+button:nth-child(24),
+button:nth-child(28) {
+    background-color: #0f3460;
+    color: #fff;
+}
+/* Zero button */
+.zero {
+    grid-column: span 2;
+}
+/* Equals button */
+.equals {
+    background-color: #4ecca3;
+    color: #1a1a2e;
+}
+.equals:hover {
+    background-color: #7ee8c7;
+}
